@@ -18,3 +18,6 @@ alias 'cd..'='cd_up'                                # can not name function 'cd.
 
 export PATH="$PATH:~/.local/bin/"
 
+# fzf
+export FZF_DEFAULT_COMMAND='fd --type f -H -E .git/'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
