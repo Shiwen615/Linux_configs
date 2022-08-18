@@ -15,6 +15,7 @@ function cd_up() {
   esac
 }
 alias 'cd..'='cd_up'                                # can not name function 'cd..'
+export DISPLAY
 
 export PATH="$PATH:~/.local/bin/"
 
