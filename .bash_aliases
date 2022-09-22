@@ -1,6 +1,11 @@
 alias cat='bat --paging=never'
 alias tmux='tmux -2'
 alias vi='nvim'
+alias ls='exa --color=always -F'
+alias la='ls -a'
+alias ll='ls -alh --git --icons'
+alias l='ls'
+alias tree='ls -T --icons'
 
 # cd up to n dirs
 # using:  cd.. 10   cd.. dir
