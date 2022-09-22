@@ -7,6 +7,8 @@ alias ll='ls -alh --git --icons'
 alias l='ls'
 alias tree='ls -T --icons'
 
+# mouse key speed
+xkbset ma 60 5 100 7 3
 # cd up to n dirs
 # using:  cd.. 10   cd.. dir
 function cd_up() {
