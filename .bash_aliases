@@ -9,6 +9,14 @@ alias tree='ls -T --icons'
 
 # mouse key speed
 xkbset ma 60 5 100 7 3
+
+# cd without typing cd
+shopt -s autocd
+# allows multiple terminal sessions to write to the history at the same time
+shopt -s histappend
+# ls or rm without come file
+shopt -s extglob
+
 # cd up to n dirs
 # using:  cd.. 10   cd.. dir
 function cd_up() {
