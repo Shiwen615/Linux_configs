@@ -38,3 +38,11 @@ export PATH="$PATH:~/.local/bin/"
 # export FZF_DEFAULT_COMMAND="fd --exclude={.git} --type f --strip-cwd-prefix"
 export FZF_DEFAULT_COMMAND="fd -H -E .git --type f"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# terminal show startup informations with random
+Distros=('openbsd' 'mac' 'debiangentoo' 'crux' 'ubuntu_old'\
+	'ubuntu-GNO' 'mint' 'windows')
+distros_size=${#Distros[@]}
+distro_index=$(($RANDOM % $distros_size))
+neofetch --ascii_distro ${Distros[$distro_index]}
+# screenfetch
