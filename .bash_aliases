@@ -30,12 +30,15 @@ function cd_up() {
   esac
 }
 alias 'cd..'='cd_up'                                # can not name function 'cd..'
+# for using gui tools in tmux
 export DISPLAY
+# for true color in tmux
+# export TERM=screen-256color
 
-export PATH="$PATH:~/.local/bin/"
 
 # fzf
 # export FZF_DEFAULT_COMMAND="fd --exclude={.git} --type f --strip-cwd-prefix"
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 export FZF_DEFAULT_COMMAND="fd -H -E .git --type f"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
@@ -46,3 +49,7 @@ distros_size=${#Distros[@]}
 distro_index=$(($RANDOM % $distros_size))
 neofetch --ascii_distro ${Distros[$distro_index]}
 # screenfetch
+
+# share history between tmux panes/windows
+export PROMPT_COMMAND="history -a; history -n"
+
